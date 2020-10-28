@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <title>questions_1</title>
+</head>
+
+<body>
+    <div class="container question1">
+        <div class="grid-position">
+            <div class="grid-position--top">
+                <img class="logo_pink" src="img/logo_pink.jpg" alt="">
+                <form class="question_wraper" action="step_3.html" method="get">
+                    <input type="hidden" name="question" value="Have you used our products before?" />
+
+                    <div class="contact_info">
+                        <p class="questions_logo">{{EN: Question 1}}</p>
+                        <p class="questions">{{EN: Have you used our products before?}}</p>
+
+                        <label class="btn btn_yes">
+                            <input type="submit" name="answer" value="yes" hidden />
+                            {{EN: yes}}
+                        </label>
+
+                        <label class="btn btn_no">
+                            <input type="submit" name="answer" value="no" hidden />
+                            {{EN: no}}
+                        </label>
+                    </div>
+                    <img class="contant_img" src="img/content_img1.jpg" alt="">
+                </form>
+            </div>
+
+            <div class="grid-position--bottom">
+                <img class="footer_img" src="img/footer_img.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

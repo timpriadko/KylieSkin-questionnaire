@@ -1,0 +1,113 @@
+// form-input
+.form-group {
+    position:relative;
+    max-width: 379px;
+    width: 45%;
+    height: 106px;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0.44;
+    transition: .3s;
+
+    .input-label {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+
+        svg {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: #ff5e00;
+                    transition: .2s;
+                }
+            }
+            
+            span {
+                color: #ff5e00;
+                transition: .2s;
+            }
+        }
+    }
+
+    &.required {
+        .form-input {
+            border-bottom: 1px solid #fa5916;
+        }
+    }
+    .form-input {
+        position: relative;
+        z-index: 2;
+        padding: 12px 0px 32px 0;
+        width: 100%;
+        outline: 0;
+        border: 0;
+        border-bottom: 3px solid #EEC1CB;
+        transition: box-shadow 150ms ease-out;
+        background-color: transparent;
+        border-radius: 0;
+        font-size: 34px;
+        letter-spacing: 3.66px;
+    }
+}
+.form-label {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 18px;
+    background-color: transparent;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+    cursor: inherit;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    color: #eec1cb;
+    font-size: 34px;
+    letter-spacing: 3.66154px;
+    text-align: left;
+}
+.focused {
+    opacity: 1;
+    transition: .3s;
+    .form-label {
+        transform: translateY(-200%);
+        font-size: 26px;
+        letter-spacing: 2.8px;
+        color: #E9E9E9;
+    }
+}
+// .form-input:focus {
+//     box-shadow: 0 2px 0 0 #CCCCCC;
+// }
+
+
+@media screen and (max-width: 560px) {
+    .form-group {
+        height: 60px;
+        .form-input, 
+        .form-label {
+            font-size: 16px;
+        }
+
+        .form-input {
+            padding-bottom: 10px;
+        }
+    }
+    .focused {
+        .form-label {
+            transform: translateY(-130%);
+            letter-spacing: 1px;
+            color: #e9e9e9;
+        }
+    }
+    .keyboard {
+        input {
+            font-size: 16px;
+            padding-bottom: 10px;
+            height: unset;
+        }
+    }
+}
