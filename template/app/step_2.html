@@ -15,19 +15,19 @@
             <div class="grid-position--top">
                 <img class="logo_pink" src="img/logo_pink.jpg" alt="">
                 <form class="question_wraper" action="step_3.html" method="get">
-                    <input type="hidden" name="question" value="Have you used our products before?" />
+                    <input type="hidden" name="question" data-question="question" value="Have you used our products before?" />
 
                     <div class="contact_info">
                         <p class="questions_logo">{{EN: Question 1}}</p>
                         <p class="questions">{{EN: Have you used our products before?}}</p>
 
                         <label class="btn btn_yes">
-                            <input type="submit" name="answer" value="yes" hidden />
+                            <input data-answer="answer" type="submit" name="answer" value="yes" hidden />
                             {{EN: yes}}
                         </label>
 
                         <label class="btn btn_no">
-                            <input type="submit" name="answer" value="no" hidden />
+                            <input data-answer="answer" type="submit" name="answer" value="no" hidden />
                             {{EN: no}}
                         </label>
                     </div>
@@ -41,6 +41,9 @@
 
         </div>
     </div>
+    
+    <script src="js/libs.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

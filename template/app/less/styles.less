@@ -31,7 +31,6 @@
   text-transform: uppercase;
   font-family: @base_font;
   color: #ffffff;
-  position: absolute;
   margin-top: -6px;
 }
 
@@ -81,11 +80,24 @@
                       supported by Chrome, Opera and Firefox */
 }
 
+.welcom {
+
+  &.container {
+    width: 1020px;
+  }
+
+  .grid-position {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+}
+
 .tap_to_start {
   width: 793px;
   height: 290px;
   background: #f8f3f5;
-  margin-top: 63px;
+  margin-top: 0;
   font-family: @base_font;
   font-style: normal;
   font-weight: normal;
@@ -103,12 +115,15 @@
   display: flex;
 }
 .QR_code {
-  margin-top: 63px;
+  margin-top: 0;
   width: 287px;
   height: 293px;
   left: 793px;
   top: 1630px;
   background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .QR_code img {
   width: 232px;
@@ -196,7 +211,9 @@
   bottom: 77.08%;
 }
 .logo_pink {
-  padding-left: 124px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contant_img {
@@ -538,8 +555,7 @@ input {
   height: 65px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 15px;
+  align-items: center;
   border: 4px solid #F8F3F5;
   font-family: 'Abel';
   font-size: 24px;
@@ -936,6 +952,14 @@ input {
       max-width: 100vw;
     }
 
+    &.welcom {
+      overflow: hidden;
+
+      .grid-position--top {
+        max-height: 70vh;
+      }
+    }
+
     .grid-position {
       height: 100%;
 
@@ -1051,6 +1075,7 @@ input {
 
     .btn {
       height: unset;
+      min-height: 76px;
       line-height: 120%;
       padding: 10px;
       margin-top: 0;
@@ -1066,7 +1091,7 @@ input {
         font-size: 16px;
         line-height: 26px;
         height: unset;
-        padding: 20px 30px;
+        padding: 5px 30px;
         margin-left: -15px;
         margin-right: -15px;
       }
@@ -1077,15 +1102,15 @@ input {
     width: 100%;
 
     h1 {
-      font-size: 24px;
-      line-height: 30px;
+      font-size: 19px;
+      line-height: 21px;
       margin-top: 20px;
       letter-spacing: 2px;
     }
 
     h4 {
-      font-size: 20px;
-      line-height: 28px;
+      font-size: 16px;
+      line-height: 20px;  
       letter-spacing: 2px;
       letter-spacing: 2px;
     }
@@ -1093,7 +1118,9 @@ input {
     p {
       width: 100%;
       margin-top: 0;
-      padding: 15px 0;  
+      padding: 15px 0;
+      font-size: 14px;
+      line-height: 130%;
     }
 
     a {
@@ -1108,6 +1135,8 @@ input {
 
     img {
       width: 50%;
+      object-fit: contain;
+      max-height: 165px;
     }
   }
 

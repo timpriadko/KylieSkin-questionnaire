@@ -55,7 +55,7 @@ $(document).ready(function () {
   /* custom keyboard layouts */
 
 
-
+if ($('#email').length > 0) {
   if (window.innerWidth > 560) {
     // init https://mottie.github.io/Keyboard/
     $('#first_name, #last_name').keyboard({
@@ -105,6 +105,7 @@ $(document).ready(function () {
       appendTo: $('.keyboard'),
     });
   }
+}
 
   //validate email
   function isEmail(email) {
@@ -206,6 +207,61 @@ $(document).ready(function () {
       $('.modal-wrap').removeClass('show');
     }
   })
+
+  // product page functionality
+  var answer_inputs = $('input[data-answer="answer"]');
+  var question = $('input[data-question="question"]').closest('form').find('input[name="question"]').val();
+  var last_question =  $('input[data-last="last_question"]');
+  var q_1_a = 'yes';
+  var q_1_b = 'no';
+  var q_2_1 = 'Breakouts';
+  var q_2_2 = 'Dry';
+  var q_2_3 = 'Oily';
+  var q_2_4 = 'All of the above';
+
+  function answerInputHandler(e) {
+    e.preventDefault();
+
+    sessionStorage.setItem(question, this.value);
+
+    if (last_question.length > 0) {
+      var answer_1 = sessionStorage.getItem('Have you used our products before?');
+      var answer_2 = sessionStorage.getItem('What’s your main skin concern?');
+      console.log(answer_1, answer_2);
+
+      if (answer_1 === q_1_a && answer_2 === q_2_1) {
+        window.open("step_4-p5.html",'_self');
+      }
+      if (answer_1 === q_1_a && answer_2 === q_2_2) {
+        window.open("step_4-p4.html",'_self');
+      }
+      if (answer_1 === q_1_a && answer_2 === q_2_3) {
+        window.open("step_4-p2.html",'_self');
+      }
+      if (answer_1 === q_1_a && answer_2 === q_2_4) {
+        window.open("step_4-p1.html",'_self');
+      }
+      if (answer_1 === q_1_b && answer_2 === q_2_1) {
+        window.open("step_4-p5.html",'_self');
+      }
+      if (answer_1 === q_1_b && answer_2 === q_2_2) {
+        window.open("step_4-p3.html",'_self');
+      }
+      if (answer_1 === q_1_b && answer_2 === q_2_3) {
+        window.open("step_4-p2.html",'_self');
+      }
+      if (answer_1 === q_1_b && answer_2 === q_2_4) {
+        window.open("step_4-p1.html",'_self');
+      }
+    } else {
+      $(this).closest('form').submit();
+    }
+  }
+
+  if (answer_inputs.length > 0) {
+    answer_inputs.click(answerInputHandler);
+  }
+
 
   /* end modal */
 });

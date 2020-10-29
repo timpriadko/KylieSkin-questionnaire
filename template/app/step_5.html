@@ -28,12 +28,12 @@
 
                     <div class="input_container">
                         <div class="form-group">
-                            <input class="form-input" name="first_name" type="text">
+                            <input class="form-input" name="first_name" type="text" id="first_name">
                             <label class="form-label" for="subscribe">{{EN: First name}}</label>
                         </div>
 
                         <div class="form-group">
-                            <input class="form-input" name="last_name" type="text">
+                            <input class="form-input" name="last_name" type="text" id="last_name">
                             <label class="form-label" for="subscribe">{{EN: Last name}}</label>
                         </div>
                     </div>
@@ -74,20 +74,21 @@
                             </div>
                         </div>
                     </div>
+
+                        <div class="btns">
+                            <label class="btn disabled submit_btn" id="customer_form_label">
+                                <input type="submit" id="customer_form_submit" disabled />
+                                {{EN: Collect my sample}}
+                            </label>
+                        </div>
+                </form>
             </div>
 
             <div class="grid-position--bottom">
-                <div class="btns">
-                    <label class="btn disabled submit_btn" id="customer_form_label">
-                        <input type="submit" id="customer_form_submit" disabled />
-                        {{EN: Collect my sample}}
-                    </label>
-                </div>
+                <img src="img/footer.jpg" alt="footer" class="footer_detail">
             </div>
-            </form>
         </div>
-
-        <img src="img/footer.jpg" alt="footer" class="footer_detail">
+        
 
 
 
@@ -534,7 +535,7 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
     <script src="js/keyboard/jquery.keyboard.min.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>

@@ -11,14 +11,14 @@
 
 <body>
     <div class="container questions2">
-        <div class="logo_pink">
-            <img src="img/logo_pink.jpg" alt="">
-        </div>
 
         <div class="grid-position">
             <div class="grid-position--top">
+                <div class="logo_pink">
+                    <img src="img/logo_pink.jpg" alt="">
+                </div>
                 <form class="question_wraper" action="step_4-p1.html" method="get">
-                    <input type="hidden" name="question" value="What’s your main skin concern?" />
+                    <input type="hidden" name="question" data-question="question" data-last="last_question" value="What’s your main skin concern?" />
 
                     <img class="contant_img" src="img/content2-img1.jpg" alt="">
                     <div class="contact_info">
@@ -27,22 +27,22 @@
 
                         <div class="btns">
                             <label class="btn question_btn">
-                                <input type="submit" name="answer" value="Breakouts" hidden />
+                                <input data-answer="answer" type="submit" name="answer" value="Breakouts" hidden />
                                 {{EN: Breakouts}}
                             </label>
 
                             <label class="btn question_btn">
-                                <input type="submit" name="answer" value="Dry" hidden />
+                                <input data-answer="answer" type="submit" name="answer" value="Dry" hidden />
                                 {{EN: Dry}}
                             </label>
 
                             <label class="btn question_btn">
-                                <input type="submit" name="answer" value="Oily" hidden />
+                                <input data-answer="answer" type="submit" name="answer" value="Oily" hidden />
                                 {{EN: Oily}}
                             </label>
 
                             <label class="btn question_btn">
-                                <input type="submit" name="answer" value="All of the above" hidden />
+                                <input data-answer="answer" type="submit" name="answer" value="All of the above" hidden />
                                 {{EN: All of the above}}
                             </label>
                         </div>
@@ -56,6 +56,9 @@
 
         </div>
     </div>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

@@ -11,12 +11,21 @@
 
 <body>
     <div class="container welcom">
-        <img src="img/logo.png" class="welcom_img">
-        <img src="img/background.jpg" alt="">
-        <p class="black_line">{{EN: Tap to begin, or scan QR code for a contactless experience}}</p>
-        <div class="welcom_wrapper">
-            <a href="step_2.html" class="btn tap_to_start">{{EN: Tap to start}}</a>
-            <div class="QR_code" id="qr_place"></div>
+
+        <div class="grid-position">
+
+            <div class="grid-position--top">
+                <img src="img/logo.png" class="welcom_img">
+                <img src="img/background.jpg" alt="">
+                <p class="black_line">{{EN: Tap to begin, or scan QR code for a contactless experience}}</p>
+            </div>
+
+            <div class="grid-position--bottom">
+                <div class="welcom_wrapper">
+                    <a href="step_2.html" class="btn tap_to_start">{{EN: Tap to start}}</a>
+                    <div class="QR_code" id="qr_place"></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
